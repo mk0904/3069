@@ -120,34 +120,21 @@ function shiftDown() {
   }
 }
 
-let x = 0
+function updateScore(score) {
+  let scoreElement = document.querySelector("#score");
+  scoreElement.textContent = parseInt(scoreElement.textContent) + score;
+}
 
 function mergeTiles(rowValues) {
   for (let i = 0; i < rowValues.length - 1; i++) {
     if (rowValues[i] === rowValues[i + 1]) {
       rowValues[i+1] *= 2;
-      x = i+1
       rowValues[i] = 0;
-      updateScore(rowValues[i]);
+      updateScore(rowValues[i+1]);
     }
   }
   return rowValues;
 }
-
-
-function mergeTiles(rowValues) {
-  for (let i = 0; i < rowValues.length - 1; i++) {
-    if (rowValues[i] === rowValues[i + 1]) {
-      rowValues[i+1] *= 2;
-      x = i+1
-      rowValues[i] = 0;
-      updateScore(rowValues[i + 1]);
-    }
-  }
-  return rowValues;
-}
-
-
 
 function handleKeyPress(event) {
   const keyCode = event.keyCode;
