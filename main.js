@@ -135,11 +135,19 @@ function mergeTiles(rowValues) {
 }
 
 
-function updateScore(mergedValue) {
-  let scoreElement = document.querySelector("#score");
-  let newScore = parseInt(scoreElement.textContent, 10) + mergedValue;
-  scoreElement.textContent = newScore;
+function mergeTiles(rowValues) {
+  for (let i = 0; i < rowValues.length - 1; i++) {
+    if (rowValues[i] === rowValues[i + 1]) {
+      rowValues[i+1] *= 2;
+      x = i+1
+      rowValues[i] = 0;
+      updateScore(rowValues[i + 1]);
+    }
+  }
+  return rowValues;
 }
+
+
 
 function handleKeyPress(event) {
   const keyCode = event.keyCode;
