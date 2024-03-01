@@ -1,0 +1,79 @@
+.grid div.merged {
+  background-color: #ffcc00; /* Change to the color you desire */
+  color: #ffffff; /* Change to the color you desire */
+}
+
+body {
+  background-color: #d5efff;
+  display: flex;
+  justify-content: center;
+  font-family: "Clear Sans", "Helvetica Neue";
+}
+
+h1 {
+  font-size: 80px;
+  line-height: 0.7;
+  color: #000000d0;
+  margin: 0px;
+}
+
+.container {
+  width: 468px;
+  margin-top: 10px auto;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 534px;
+  height: 534px;
+  background-color: #348bae8b;
+  border: 7px solid #005b798b;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+
+.grid div {
+  width: 75px;
+  height: 75px;
+  margin: 7px;
+  border-radius: 3px;
+  background-color: #d4f0fc;
+  color: #000000;
+  font-weight: bold;
+  text-align: center;
+  font-size: 60px;
+  line-height: 1.3;
+}
+
+
+
+.score-container,
+button {
+  border: 5px solid #005b79bf;
+  text-align: center;
+  height: 60px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.score-container {
+  width: 70px;
+}
+
+#score {
+  font-size: 25px;
+}
+
+.score-title,
+#restart-button {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 18px;
+}
